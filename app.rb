@@ -9,5 +9,11 @@ class MakersBnB < Sinatra::Base
     erb :index
   end
 
+  post '/' do
+    username = params['username']
+    Username.create(username: username)
+    redirect '/'
+  end
+
   run! if app_file == $0
-end 
+end
