@@ -37,11 +37,60 @@ I would like to have the option to add a fix price for my space
 ```
 As a User 
 So that I can see what spaces are avalible 
-I would to have a view where I can see all spaces avaliable
+I would like to have a view where I can see all spaces avaliable
 ```
 
 ```
 As a Customer 
 So that I can see what spaces are avalible 
-I would to have a view where I can see all spaces avaliable
+I would like to have a view where I can see all spaces avaliable
 ```
+
+```
+As a Customer 
+So that I can see when spaces are avaliable 
+I would like to have the option to publish when my space is free
+```
+
+```
+As a User 
+So that I can choice a place to stay for a night
+I would like the option to reserve a space 
+```
+
+```
+As a User 
+So that I can allow a user to use my space
+I would like the option to accept the request for a space
+```
+
+```
+As a User 
+So that I show users when my space is not avaliable 
+I would like the option to grey dates not avaliable 
+```
+
+```
+As a User 
+So that I would like to view all unreserved spaces so I can book a space 
+I would like the option to see is a space has been resereved 
+```
+
+```
+As a User 
+So that I would like to know if I have a place to stay the night 
+I would like a confirmation  
+```
+
+To do 26/05/20 - MVP
+ Setup Folder Structure 
+ Setup for App DB 
+ Sign in 
+    Front End - Set Up Views / Test (Features)
+    Back End - Set Models / Set Up Unit Testing 
+ View All Spaces 
+    Front End - Set up view for all/freature test
+    Back End - Set Up logic / Unit Test 
+ Add Spaces 
+    Front End - Add form 
+    Back End - Set Up Logic / Unit test
