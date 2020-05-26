@@ -1,7 +1,9 @@
 require 'sinatra'
-require 'bnb'
+require './lib/bnb'
+require './lib/db_connection'
 
 class MakersBnB < Sinatra::Base
+  enable :sessions
   get '/test' do
     "Hello world"
   end
@@ -11,12 +13,13 @@ class MakersBnB < Sinatra::Base
     erb :index
   end
 
-  post '/' do
-    username = params['username']
-    Username.create(username: username)
-    redirect '/'
+  post '/new' do
+  session['username'] = params['username']
+    redirect '/all'
+  end 
 
   get '/all' do
+    @username = session['username']
     @places = Bnb.all
     erb :all
   end
