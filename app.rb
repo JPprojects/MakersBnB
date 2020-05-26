@@ -6,6 +6,16 @@ class MakersBnB < Sinatra::Base
     "Hello world"
   end
 
+
+  get '/' do
+    erb :index
+  end
+
+  post '/' do
+    username = params['username']
+    Username.create(username: username)
+    redirect '/'
+
   get '/all' do
     @places = Bnb.all
     erb :all
