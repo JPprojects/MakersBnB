@@ -5,9 +5,9 @@ RSpec.describe Bnb do
   describe ".all" do
     it "can view all records" do
 
-      place = Bnb.create(place: "London", user_name:"george", description: "Good", fixed_price: "20")
-      Bnb.create(place: "Berlin", user_name:"george", description: "Okay", fixed_price: "25")
-      Bnb.create(place: "Casablanca", user_name:"george", description: "Good", fixed_price: "100")
+      place = Bnb.create(place: "London", user_name:"george", description: "Good", fixed_price: "20", date_from: "2020-05-27", date_to: "2020-05-28")
+      Bnb.create(place: "Berlin", user_name:"george", description: "Okay", fixed_price: "25", date_from: "2020-05-27", date_to: "2020-05-28")
+      Bnb.create(place: "Casablanca", user_name:"george", description: "Good", fixed_price: "100", date_from: "2020-05-27", date_to: "2020-05-28")
 
 
       places = Bnb.all
