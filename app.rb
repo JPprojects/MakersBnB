@@ -37,6 +37,14 @@ class MakersBnB < Sinatra::Base
     erb :reservation
   end
 
+  get '/add_place' do
+    erb :add_place
+  end
+
+  post '/add_place_post' do
+    Bnb.create( user_name: session['username'] , place: params['place'], description: params['description'], fixed_price: params['fixed_price'])
+    redirect '/all'
+  end
 
   run! if app_file == $0
 end
