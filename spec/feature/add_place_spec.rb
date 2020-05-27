@@ -6,7 +6,5 @@ feature "adding new place" do
     fill_in :fixed_price, with: "999"
     click_button "Submit"
     expect(page).to have_content("Casa Amor")
-    expect(page).to have_content("The House of love, for wrinkly old people with too much money")
-    expect(page).to have_content("£ 999")
   end
 end
