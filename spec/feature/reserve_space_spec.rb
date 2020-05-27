@@ -7,6 +7,7 @@ feature 'reserve a space' do
     fill_in :username, with: 'Customer'
     click_button 'Sign in'
     click_button 'Reserve'
+    click_button 'Submit'
     expect(page).to have_content 'Thank you for your reservation'
   end
 end

@@ -1,8 +1,8 @@
 <h1>Welcome <%= @username %>!</h1>
 <ul>
 <% @places.each do |listing| %>
-<li><%= listing.place %>
-  <form action="/all/reservation" method="get">
+<li> <%= listing.place %>
+  <form action="/all/reserve/<%= listing.id %>" method="get">
           <input type="submit" value="Reserve" />
         </form>
       </li>

@@ -13,7 +13,6 @@
           1,
           null,
           null,
-          null,
           1,
           4,
           null,
@@ -31,6 +30,17 @@
           null,
           1,
           1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
           null,
           null,
           1,
@@ -45,7 +55,9 @@
           1,
           null,
           1,
-          4,
+          6,
+          6,
+          6,
           null,
           null,
           null,
@@ -57,9 +69,13 @@
           null,
           null,
           1,
-          0,
-          0,
+          1,
+          1,
           null,
+          null,
+          1,
+          1,
+          1,
           null,
           null
         ]
@@ -89,7 +105,7 @@
           null,
           null,
           1,
-          7,
+          9,
           null,
           null
         ]
@@ -165,6 +181,7 @@
           1,
           1,
           1,
+          1,
           null,
           null
         ]
@@ -197,6 +214,6 @@
         ]
       }
     },
-    "timestamp": 1590569742
+    "timestamp": 1590574858
   }
 }
