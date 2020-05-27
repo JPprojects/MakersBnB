@@ -1,7 +1,11 @@
 {
   "RSpec": {
     "coverage": {
+<<<<<<< HEAD
       "/Users/student/Documents/Week - 7 /MakersBnB/app.rb": {
+=======
+      "/Users/avinhurry/Projects/MakersBnB/app.rb": {
+>>>>>>> master
         "lines": [
           1,
           1,
@@ -15,12 +19,21 @@
           null,
           null,
           1,
+<<<<<<< HEAD
           3,
           null,
           null,
           1,
           0,
           0,
+=======
+          4,
+          null,
+          null,
+          1,
+          1,
+          1,
+>>>>>>> master
           null,
           null,
           1,
@@ -30,6 +43,7 @@
           null,
           null,
           1,
+<<<<<<< HEAD
           1,
           null,
           null,
@@ -43,6 +57,12 @@
         ]
       },
       "/Users/student/Documents/Week - 7 /MakersBnB/lib/bnb.rb": {
+=======
+          null
+        ]
+      },
+      "/Users/avinhurry/Projects/MakersBnB/lib/bnb.rb": {
+>>>>>>> master
         "lines": [
           1,
           null,
@@ -50,16 +70,22 @@
           1,
           null,
           1,
+<<<<<<< HEAD
           15,
           15,
           15,
           15,
           15,
+=======
+          3,
+          null,
+>>>>>>> master
           null,
           null,
           null,
           null,
           1,
+<<<<<<< HEAD
           3,
           3,
           7,
@@ -69,13 +95,28 @@
           1,
           8,
           8,
+=======
+          2,
+          2,
+          3,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+>>>>>>> master
           null,
           null,
           null,
           null
         ]
       },
+<<<<<<< HEAD
       "/Users/student/Documents/Week - 7 /MakersBnB/lib/db_connection.rb": {
+=======
+      "/Users/avinhurry/Projects/MakersBnB/lib/db_connection.rb": {
+>>>>>>> master
         "lines": [
           1,
           null,
@@ -86,7 +127,11 @@
           null
         ]
       },
+<<<<<<< HEAD
       "/Users/student/Documents/Week - 7 /MakersBnB/lib/database_connection.rb": {
+=======
+      "/Users/avinhurry/Projects/MakersBnB/lib/database_connection.rb": {
+>>>>>>> master
         "lines": [
           1,
           null,
@@ -100,49 +145,78 @@
           null,
           null,
           1,
+<<<<<<< HEAD
           12,
+=======
+          6,
+>>>>>>> master
           null,
           null
         ]
       },
+<<<<<<< HEAD
       "/Users/student/Documents/Week - 7 /MakersBnB/spec/bnb_spec.rb": {
         "lines": [
           1,
           1,
+=======
+      "/Users/avinhurry/Projects/MakersBnB/spec/db_connection_spec.rb": {
+        "lines": [
+          1,
+>>>>>>> master
+          null,
+          1,
+          1,
+          1,
+<<<<<<< HEAD
           null,
           1,
           1,
           1,
           null,
-          1,
-          1,
-          1,
           null,
-          null,
-          1,
-          1,
-          null,
-          1,
-          1,
-          1,
-          1,
-          1,
-          null,
-          null,
-          null,
-          1,
           1,
           1,
           null,
           1,
           1,
           1,
+          1,
+          1,
+          null,
+=======
+          1,
+          null,
+          1,
+          null,
+          null,
+          null,
+          1,
+          null,
+          1,
+          null,
+          1,
+>>>>>>> master
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          1,
+<<<<<<< HEAD
+          1,
+          1,
+=======
+          null,
+>>>>>>> master
           1,
           null,
           null,
           null
         ]
       },
+<<<<<<< HEAD
       "/Users/student/Documents/Week - 7 /MakersBnB/spec/db_connection_spec.rb": {
         "lines": [
           1,
@@ -161,11 +235,21 @@
           1,
           null,
           1,
+=======
+      "/Users/avinhurry/Projects/MakersBnB/spec/feature/home_page_spec.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          null,
+>>>>>>> master
           null,
           null,
           1,
           1,
           1,
+<<<<<<< HEAD
           null,
           1,
           null,
@@ -181,11 +265,18 @@
           1,
           1,
           1,
+=======
+          1,
+          null,
+          null,
+          null,
+>>>>>>> master
           1,
           1,
           1,
           1,
           null,
+<<<<<<< HEAD
           null
         ]
       },
@@ -195,12 +286,15 @@
           1,
           1,
           1,
+=======
+>>>>>>> master
           null,
           null,
           1,
           1,
           1,
           1,
+<<<<<<< HEAD
           null,
           null,
           1,
@@ -212,11 +306,24 @@
         ]
       },
       "/Users/student/Documents/Week - 7 /MakersBnB/spec/feature/login_test_spec.rb": {
+=======
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/avinhurry/Projects/MakersBnB/spec/feature/login_test_spec.rb": {
+>>>>>>> master
         "lines": [
 
         ]
       },
+<<<<<<< HEAD
       "/Users/student/Documents/Week - 7 /MakersBnB/spec/feature/test_page_spec.rb": {
+=======
+      "/Users/avinhurry/Projects/MakersBnB/spec/feature/test_page_spec.rb": {
+>>>>>>> master
         "lines": [
           1,
           1,
@@ -226,7 +333,11 @@
           null
         ]
       },
+<<<<<<< HEAD
       "/Users/student/Documents/Week - 7 /MakersBnB/spec/feature/view_all_spaces_spec.rb": {
+=======
+      "/Users/avinhurry/Projects/MakersBnB/spec/feature/view_all_spaces_spec.rb": {
+>>>>>>> master
         "lines": [
           1,
           null,
@@ -235,7 +346,10 @@
           1,
           1,
           1,
+<<<<<<< HEAD
           null,
+=======
+>>>>>>> master
           1,
           1,
           1,
@@ -245,6 +359,10 @@
         ]
       }
     },
+<<<<<<< HEAD
     "timestamp": 1590575686
+=======
+    "timestamp": 1590570519
+>>>>>>> master
   }
 }
