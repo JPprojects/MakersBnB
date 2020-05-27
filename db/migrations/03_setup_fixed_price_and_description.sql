@@ -1,0 +1,2 @@
+ALTER TABLE main ADD COLUMN description VARCHAR(100);
+ALTER TABLE main ADD COLUMN fixed_price VARCHAR(5);

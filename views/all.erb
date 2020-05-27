@@ -2,21 +2,19 @@
   <link href="/css/style.css" rel="stylesheet" />
 </head>
 
-<div class="container center">
-  <h1>Welcome <%= @username %>!</h1>
+<h1 class="center">Welcome <%= @username %>!</h1>
 
-  <ul>
-    <% @places.each do |listing| %>
-    <li class="list card">
-      <div class="card-inner">
-        <h2><%= listing.place %></h2>
-        <p>username</p>
-        <p>£**</p>
-        <form>
-          <input type="submit" value="Reserve">
-        </form>
-      </div>
-    </li>
-    <% end %>
-  </ul>
-</div>
+<ul>
+  <% @places.each do |listing| %>
+  <li  <% if listing.reservation_status != 'reserved' %> class="list card" <% else%>  class="list card--disabled" <% end %> > 
+    <div class="card-inner">
+      <h2><%= listing.place %></h2>
+      <p>its okay I guess</p>
+      <p>&#163;<%= listing.fixed_price %></h2></p>
+      <form action="/all/reserve/<%= listing.id %>" method="get">
+        <input type="submit" value="Reserve" />
+      </form>
+    </div>
+  </li>
+  <% end %>
+</ul>

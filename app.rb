@@ -8,7 +8,6 @@ class MakersBnB < Sinatra::Base
     "Hello world"
   end
 
-
   get '/' do
     erb :index
   end
@@ -16,12 +15,35 @@ class MakersBnB < Sinatra::Base
   post '/new' do
   session['username'] = params['username']
     redirect '/all'
-  end 
+  end
 
   get '/all' do
     @username = session['username']
     @places = Bnb.all
     erb :all
+  end
+
+  get '/all/reserve/:id' do
+  @listing = Bnb.find(id: params[:id])
+  erb :edit
+  end
+
+  post '/all/:id' do
+    Bnb.reserve(id: params[:id], place: params[:place], reservation_status: 'reserved')
+    redirect '/all/confirmed_reservation'
+  end
+
+  get '/all/confirmed_reservation' do
+    erb :reservation
+  end
+
+  get '/add_place' do
+    erb :add_place
+  end
+
+  post '/add_place_post' do
+    Bnb.create( user_name: session['username'] , place: params['place'], description: params['description'], fixed_price: params['fixed_price'])
+    redirect '/all'
   end
 
   run! if app_file == $0
