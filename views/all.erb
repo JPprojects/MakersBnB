@@ -2,9 +2,11 @@
 <ul>
 <% @places.each do |listing| %>
 <li> <%= listing.place %>
+  <% if listing.reservation_status != 'reserved' %>
   <form action="/all/reserve/<%= listing.id %>" method="get">
           <input type="submit" value="Reserve" />
         </form>
+        <% end %>
       </li>
 <% end %>
 </ul>
