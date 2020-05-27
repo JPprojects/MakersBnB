@@ -8,7 +8,6 @@ class MakersBnB < Sinatra::Base
     "Hello world"
   end
 
-
   get '/' do
     erb :index
   end
@@ -22,6 +21,20 @@ class MakersBnB < Sinatra::Base
     @username = session['username']
     @places = Bnb.all
     erb :all
+  end
+
+  get '/all/reserve/:id' do
+  @listing = Bnb.find(id: params[:id])
+  erb :edit
+  end
+
+  post '/all/:id' do
+    Bnb.reserve(id: params[:id], place: params[:place], reservation_status: 'reserved')
+    redirect '/all/confirmed_reservation'
+  end
+
+  get '/all/confirmed_reservation' do
+    erb :reservation
   end
 
   get '/add_place' do

@@ -1,6 +1,10 @@
 <h1>Welcome <%= @username %>!</h1>
 <ul>
 <% @places.each do |listing| %>
-<li><%= listing.place %> </li>
+<li> <%= listing.place %>
+  <form action="/all/reserve/<%= listing.id %>" method="get">
+          <input type="submit" value="Reserve" />
+        </form>
+      </li>
 <% end %>
 </ul>
