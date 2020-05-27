@@ -1,3 +1,2 @@
 CREATE DATABASE "Makers_BnB";
 CREATE TABLE main (id SERIAL PRIMARY KEY, user_name VARCHAR(60), place VARCHAR(100));
-
