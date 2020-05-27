@@ -1,6 +1,18 @@
-<h1>Welcome <%= @username %>!</h1>
-<ul>
-<% @places.each do |listing| %>
-<li><%= listing.place %> </li>
-<% end %>
-</ul>
+<div class="container center">
+  <h1>Welcome <%= @username %>!</h1>
+
+  <ul>
+    <% @places.each do |listing| %>
+    <li class="list card">
+      <div class="card-inner">
+        <h2><%= listing.place %></h2>
+        <p>username</p>
+        <p>£**</p>
+        <form>
+          <input type="submit" value="Reserve">
+        </form>
+      </div>
+    </li>
+    <% end %>
+  </ul>
+</div>

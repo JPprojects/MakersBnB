@@ -23,6 +23,7 @@ ENV['ENVIRONMENT'] = 'test'
 
 require File.join(File.dirname(__FILE__), '..', 'app.rb')
 
+
 Capybara.app = MakersBnB
 
 RSpec.configure do |config|
