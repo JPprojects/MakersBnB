@@ -4,11 +4,11 @@
 
 <h1 class="center">Welcome <%= @username %>!</h1>
 
-<form action="/add_place"  method="get">
+<form class="center" action="/add_place"  method="get">
   <input type="submit" value="Add listing" />
 </form>
 
-<ul>
+<ul class="pd">
   <% @places.each do |listing| %>
   <li  <% if listing.reservation_status != 'reserved' %> class="list card" <% else%>  class="list card--disabled" <% end %> > 
     <div class="card-inner">

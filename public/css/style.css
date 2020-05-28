@@ -1,3 +1,12 @@
+ul.pd{
+  padding-left: 0 !important;
+}
+
+input{
+  max-width: 500px;
+  margin-bottom: 10px;
+}
+
 .center-page{
   display: flex;
   flex-flow: column;
@@ -21,6 +30,18 @@
   margin: 10 auto;
 }
 
+.card--add {
+  width: 100%;
+  border-radius: 10px;
+  max-width: 300px;
+  background: #ffffff;
+  box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.1);
+  text-align: center;
+  top: 0;
+  margin: 10 auto;
+  padding-top: 20px;
+}
+
 .card--disabled {
   width: 100%;
   border-radius: 10px;
@@ -39,4 +60,10 @@
 .list{
   list-style: none;
   margin-bottom: 10px;
+}
+
+.flex-columns{
+  display: flex;
+  flex-flow: column;
+  align-items: center;
 }
