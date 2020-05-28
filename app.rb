@@ -1,6 +1,7 @@
 require 'sinatra'
 require './lib/bnb'
 require './lib/db_connection'
+require './lib/reservation_id'
 
 class MakersBnB < Sinatra::Base
   enable :sessions
@@ -13,7 +14,7 @@ class MakersBnB < Sinatra::Base
   end
 
   post '/new' do
-  session['username'] = params['username']
+    session['username'] = params['username']
     redirect '/all'
   end
 
@@ -24,8 +25,8 @@ class MakersBnB < Sinatra::Base
   end
 
   get '/all/reserve/:id' do
-  @listing = Bnb.find(id: params[:id])
-  erb :edit
+    @listing = Bnb.find(id: params[:id])
+    erb :edit
   end
 
   post '/all/:id' do
@@ -34,6 +35,8 @@ class MakersBnB < Sinatra::Base
   end
 
   get '/all/confirmed_reservation' do
+    @username = session['username']
+    @id = ReservationId.randomize
     erb :reservation
   end
 

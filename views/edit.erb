@@ -1,5 +1,10 @@
 <form action='/all/<%= @listing.id %>' method='post'>
   <input type="hidden" name="_method" value="PATCH" />
-  Click submit to confirm your reservation
-  <input type='submit' value='Submit'/>
+  <p>Review details of your booking</p>
+  <p>Place: <%= @listing.place %></p>
+  <p>Description: <%= @listing.description %></p>
+  <p>Price: <%= @listing.fixed_price %></p>
+  <p>Click to confirm your reservation</p>
+
+  <input type='submit' value='Confirm'/>
 </form>
