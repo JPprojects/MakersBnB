@@ -30,7 +30,7 @@ class MakersBnB < Sinatra::Base
   end
 
   post '/all/:id' do
-    Bnb.reserve(id: params[:id], place: params[:place], reservation_status: 'reserved')
+    Bnb.reserve(id: params[:id], place: params[:place], reservation_status: 'requested')
     redirect '/all/confirmed_reservation'
   end
 

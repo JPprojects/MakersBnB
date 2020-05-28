@@ -8,7 +8,7 @@ feature 'reserve a space' do
     click_button 'Sign in'
     click_button 'Reserve'
     click_button 'Confirm'
-    expect(page).to have_content 'Thank you for your reservation'
+    expect(page).to have_content 'Your request has been submitted'
   end
 
 feature 'review reservation' do
@@ -34,6 +34,5 @@ feature 'reservation id' do
     click_button 'Confirm'
     expect(page).to have_content 'Your reservation id: '
   end
-end 
-
+end  
 end
