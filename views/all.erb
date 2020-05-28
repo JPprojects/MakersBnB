@@ -1,10 +1,15 @@
 <h1>Welcome <%= @username %>!</h1>
+<form action="/add_place"  method="get">
+        <input type="submit" value="Add listing" />
+      </form>
 <ul>
 <% @places.each do |listing| %>
 <li> <%= listing.place %>
+  <% if listing.reservation_status != 'reserved' %>
   <form action="/all/reserve/<%= listing.id %>" method="get">
           <input type="submit" value="Reserve" />
         </form>
+        <% end %>
       </li>
 <% end %>
 </ul>
