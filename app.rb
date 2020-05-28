@@ -34,6 +34,11 @@ class MakersBnB < Sinatra::Base
     redirect '/all/confirmed_reservation'
   end
 
+  # post '/all/approve/:id' do
+  #   Bnb.reserve(id: params[:id], place: params[:place], reservation_status: 'reserved')
+  #   redirect '/all'
+  # end
+
   get '/all/confirmed_reservation' do
     @username = session['username']
     @id = ReservationId.randomize
