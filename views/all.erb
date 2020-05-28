@@ -13,11 +13,11 @@
   <li  <% if listing.reservation_status != 'reserved' %> class="list card" <% else%>  class="list card--disabled" <% end %> > 
     <div class="card-inner">
       <h2><%= listing.place %></h2>
-      <p>its okay I guess</p>
+      <h3><%= listing.date_from %> - <%= listing.date_to %></h3>
+      <p><%= listing.description %></p>
       <p>&#163;<%= listing.fixed_price %></h2></p>
       <% if listing.reservation_status != 'reserved' %>
         <form action="/all/reserve/<%= listing.id %>" method="get">
->>>>>>> master
           <input type="submit" value="Reserve" />
         </form>
       <% end %>
