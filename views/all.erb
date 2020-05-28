@@ -4,7 +4,7 @@
       </form>
 <ul>
 <% @places.each do |listing| %>
-<li> <%= listing.place %>
+<li> <%= listing.place %><%= listing.date_from %><%= listing.date_to %>
   <% if listing.reservation_status != 'reserved' %>
   <form action="/all/reserve/<%= listing.id %>" method="get">
           <input type="submit" value="Reserve" />

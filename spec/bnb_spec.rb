@@ -11,7 +11,6 @@ RSpec.describe Bnb do
 
 
       places = Bnb.all
-      p places
 
       expect(places.length).to eq 3
       expect(places.first).to be_a Bnb

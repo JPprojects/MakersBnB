@@ -2,7 +2,7 @@ require './lib/database_connection'
 
 feature 'reserve a space' do
   scenario 'allows user to reserve' do
-    DatabaseConnection.query("INSERT INTO main (user_name, place) VALUES('George', 'London');")
+    Bnb.create(place: "London", user_name:"george", description: "Good", fixed_price: "20", date_from: "2020-05-27", date_to: "2020-05-28")
     visit '/'
     fill_in :username, with: 'Customer'
     click_button 'Sign in'
