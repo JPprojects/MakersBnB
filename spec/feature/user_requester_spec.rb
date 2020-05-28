@@ -15,10 +15,11 @@ feature 'user can successfully confirm a reservation' do
 
     visit '/'
     fill_in :username, with:'Customer'
+    click_button 'Sign in'
     click_button 'Reserve'
     click_button 'Confirm'
     expect(page).to have_content('Your request has been submitted')
-    expect(page).to not_have_content 'Approve'
+    expect(page).to have_no_content 'Approve'
 
     visit '/'
     fill_in :username, with:'Poster'
