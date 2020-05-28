@@ -1,0 +1,2 @@
+ALTER TABLE main ADD COLUMN date_from DATE;
+ALTER TABLE main ADD COLUMN date_to DATE;

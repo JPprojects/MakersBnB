@@ -42,7 +42,7 @@ class MakersBnB < Sinatra::Base
   end
 
   post '/add_place_post' do
-    Bnb.create( user_name: session['username'] , place: params['place'], description: params['description'], fixed_price: params['fixed_price'])
+    Bnb.create( user_name: session['username'] , place: params['place'], description: params['description'], fixed_price: params['fixed_price'], date_from: params['date_from'], date_to: params['date_to'])
     redirect '/all'
   end
 
