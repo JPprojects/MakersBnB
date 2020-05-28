@@ -1,8 +1,14 @@
-<form action="/add_place_post" method="post">
-  <input type="text" name="place" placeholder="place" >
-  <input type="text" name="description" placeholder="description">
-  <input type="text" name="fixed_price" placeholder="fixed_price">
-  <input type="date" name="date_from" value="date_from" min="2020-01-01" max="2020-12-31">
-  <input type="date" name="date_to" value="date_to" min="2020-01-01" max="2020-12-31">
-  <input type="submit" value="Submit">
-</form>
+<head>
+  <link href="/css/style.css" rel="stylesheet" />
+</head>
+
+<div class="center-page">
+  <form class="flex-columns card--add" action="/add_place_post" method="post"> 
+    <input type="text" name="place" placeholder="place" >
+    <input type="text" name="description" placeholder="description">
+    <input type="text" name="fixed_price" placeholder="fixed_price">
+    <input type="date" name="date_from" value="date_from" min="2020-01-01" max="2020-12-31">
+    <input type="date" name="date_to" value="date_to" min="2020-01-01" max="2020-12-31">
+    <input type="submit" value="Submit">
+  </form>
+</div>
