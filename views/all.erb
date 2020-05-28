@@ -19,6 +19,8 @@
       <% if listing.reservation_status != 'reserved' %>
         <form action="/all/reserve/<%= listing.id %>" method="get">
           <input type="submit" value="Reserve" />
+          <% else %>
+          <p> Booked </p>
         </form>
       <% end %>
     </div>
