@@ -30,14 +30,15 @@ class MakersBnB < Sinatra::Base
   end
 
   post '/all/:id' do
-    Bnb.reserve(id: params[:id], place: params[:place], reservation_status: 'requested')
+    dev = Bnb.reserve(id: params[:id], place: params[:place], reservation_status: 'requested')
+    p dev
     redirect '/all/confirmed_reservation'
   end
 
-  # post '/all/approve/:id' do
-  #   Bnb.reserve(id: params[:id], place: params[:place], reservation_status: 'reserved')
-  #   redirect '/all'
-  # end
+  post '/all/approve/:id' do
+    Bnb.reserve(id: params[:id], place: params[:place], reservation_status: 'reserved')
+    redirect '/all'
+  end
 
   get '/all/confirmed_reservation' do
     @username = session['username']

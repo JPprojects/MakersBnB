@@ -33,7 +33,7 @@ def self.find(id:)
 end
 
   def self.reserve(id:, place:, reservation_status:)
-   result = DatabaseConnection.query("UPDATE main SET reservation_status = 'reserved' WHERE id = #{id} RETURNING id, place, reservation_status;")
+   result = DatabaseConnection.query("UPDATE main SET reservation_status = '#{reservation_status}' WHERE id = #{id} RETURNING id, place, reservation_status;")
    Bnb.new(id: result[0]['id'], user_name: result[0]['user_name'], place: result[0]['place'], description: result[0]['description'], fixed_price: result[0]['fixed_price'], reservation_status: result[0]['reservation_status'], date_from: result[0]['date_from'], date_to: result[0]['date_to'])
 end
 end
