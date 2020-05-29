@@ -24,6 +24,8 @@ feature 'user can successfully confirm a reservation' do
     visit '/'
     fill_in :username, with:'Poster'
     click_button 'Sign in'
-    expect(page).to have_content 'Approve'
+    expect(page).to have_button 'Approve'
+    click_button 'Approve'
+    expect(page).to have_content 'Booked'
   end
 end

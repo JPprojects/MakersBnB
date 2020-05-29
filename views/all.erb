@@ -9,8 +9,8 @@
 </form>
  <% @places.each do |listing| %>
 <% if @username == listing.user_name && listing.reservation_status == 'requested' %>
-  <form action="/all/approve/<%= listing.id %>" method="get">
-    <label for="approve">listing.place</label>
+  <form action="/all/approve/<%= listing.id %>" method="post">
+    <label for="approve"><%=listing.place %></label>
     <input type="submit" id="approve" value="Approve" />
   </form>
   <% end %>
@@ -26,7 +26,7 @@
          <h3><%= listing.date_from %> - <%= listing.date_to %></h3>
           <p><%= listing.description %></p>
           <p>&#163;<%= listing.fixed_price %></h2></p>
-          <% if listing.reservation_status != 'reserved' || 'requested' %>
+          <% if listing.reservation_status != ('reserved' || 'requested') %>
             <form action="/all/reserve/<%= listing.id %>" method="get">
               <input type="submit" value="Reserve" />
               <% else %>
