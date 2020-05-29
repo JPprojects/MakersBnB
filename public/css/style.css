@@ -1,3 +1,13 @@
+body{
+  background-image: url('/images/IT_2017NOV10OnlineStory_AirBnB_1500x1001px.jpg');
+  font-family: Arial, Helvetica, sans-serif !important;
+}
+
+
+.title{
+  color: aliceblue;
+}
+
 ul.pd{
   padding-left: 0 !important;
 }
@@ -60,10 +70,11 @@ input{
 .card--button{
   box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.1);
   border: none;
-  padding: 3px;
+  padding: 3.2px 10px;
   margin: 0;
   border-radius: 10px;
   height: 100%;
+  background-color: #ffffff;
 }
 
 .card-inner{
@@ -96,10 +107,11 @@ input{
   text-align: center;
   height: 100%;
   font-size: 15px;
+  background-color: #ffffff;
 }
 
 .dropdown_link{
-  padding: 5px;
+  padding: 4px;
 
 }
 
@@ -124,4 +136,5 @@ input{
   border: none;
   margin: 0;
   font-size: 15px;
+  background-color: #ffffff;
 }
