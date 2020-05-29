@@ -1,10 +1,16 @@
-<form action='/all/<%= @listing.id %>' method='post'>
-  <input type="hidden" name="_method" value="PATCH" />
-  <p>Review details of your booking</p>
-  <p>Place: <%= @listing.place %></p>
-  <p>Description: <%= @listing.description %></p>
-  <p>Price: <%= @listing.fixed_price %></p>
-  <p>Click to confirm your reservation</p>
+<head>
+  <link href="/css/style.css" rel="stylesheet" />
+</head>
 
-  <input type='submit' value='Confirm'/>
-</form>
+<div class="center-page">
+  <form class="card" action='/all/<%= @listing.id %>' method='post'>
+    <input type="hidden" name="_method" value="PATCH" />
+    <p>Review details of your booking</p>
+    <p>Place: <%= @listing.place %></p>
+    <p>Description: <%= @listing.description %></p>
+    <p>Price: <%= @listing.fixed_price %></p>
+    <p>Click to confirm your reservation</p>
+
+    <input type='submit' value='Confirm'/>
+  </form>
+</div>
