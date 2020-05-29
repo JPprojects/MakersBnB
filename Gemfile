@@ -5,6 +5,7 @@ git_source(:github) { |repo_name| "https://github.com/#{repo_name}" }
 gem 'pg'
 gem 'sinatra'
 gem 'sass-rails', '~> 5.0'
+gem 'ruby'
 
 group :test do
   gem 'capybara'
