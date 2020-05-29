@@ -3,18 +3,29 @@
 </head>
 
 <h1 class="center">Welcome <%= @username %>!</h1>
-<div>
-<form class="center" action="/add_place"  method="get">
-  <input type="submit" value="Add listing" />
+
+
+<div class="flex_row">
+
+
+
+<form class="center card--button" action="/add_place"  method="get">
+  <input class="button" type="submit" value="Add listing" />
 </form>
+<ul class="dropdown list pd">
+<li class="dropdown_link"> Approvals </li>
  <% @places.each do |listing| %>
 <% if @username == listing.user_name && listing.reservation_status == 'requested' %>
-  <form action="/all/approve/<%= listing.id %>" method="post">
+<li class="dropdown_approvals">  
+<form class="approvals" action="/all/approve/<%= listing.id %>" method="post">
     <label for="approve"><%=listing.place %></label>
     <input type="submit" id="approve" value="Approve" />
   </form>
+  </li>
   <% end %>
 <% end %>
+</ul>
+
 </div>
 
 <ul class="pd">

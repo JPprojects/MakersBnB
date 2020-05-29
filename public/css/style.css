@@ -53,6 +53,19 @@ input{
   margin: 10 auto;
 }
 
+.card--large{
+  max-width: 380px;
+}
+
+.card--button{
+  box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.1);
+  border: none;
+  padding: 3px;
+  margin: 0;
+  border-radius: 10px;
+  height: 100%;
+}
+
 .card-inner{
   padding: 2px;
 }
@@ -66,4 +79,49 @@ input{
   display: flex;
   flex-flow: column;
   align-items: center;
+}
+
+.flex_row{
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+}
+
+.dropdown{
+  box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  margin-top: 0;
+  margin-left: 20px;
+  width: 100px;
+  text-align: center;
+  height: 100%;
+  font-size: 15px;
+}
+
+.dropdown_link{
+  padding: 5px;
+
+}
+
+.dropdown_approvals{
+  display: none;
+  transition: all 1s ease;
+  height: 100%;
+}
+
+.dropdown:hover .dropdown_approvals{
+  display: inherit;
+  margin-top: 10px;
+  transition: all 1s ease;
+  height: max-content;
+}
+
+.approvals{
+  margin-bottom: 0;
+}
+
+.button{
+  border: none;
+  margin: 0;
+  font-size: 15px;
 }
