@@ -23,7 +23,7 @@ class Bnb
   end
 
   def self.create(user_name:, place:, description:, fixed_price:, date_from:, date_to:)
-    result = DatabaseConnection.query("INSERT INTO main (user_name, place, description, fixed_price, date_from, date_to) VALUES('#{user_name}', '#{place}', '#{description}', '#{fixed_price}', '#{date_from}', '#{date_to}') RETURNING id, user_name, place, description, fixed_price, reservation_status, date_from, date_to")
+    result = DatabaseConnection.query("INSERT INTO main (user_name, place, description, fixed_price, date_from, date_to) VALUES('#{user_name}', '#{place}', '#{description}', '#{fixed_price}', '#{date_from}', '#{date_to}') RETURNING id, user_name, place, description, fixed_price, reservation_status, date_from, date_to;")
     Bnb.new(id: result[0]['id'], user_name: result[0]['user_name'], place: result[0]['place'],  description: result[0]['description'], fixed_price: result[0]['fixed_price'], reservation_status: result[0]['reservation_status'], date_from: result[0]['date_from'], date_to: result[0]['date_to'])
   end
 
@@ -33,7 +33,7 @@ def self.find(id:)
 end
 
   def self.reserve(id:, place:, reservation_status:)
-   result = DatabaseConnection.query("UPDATE main SET reservation_status = 'reserved' WHERE id = #{id} RETURNING id, place, reservation_status;")
+   result = DatabaseConnection.query("UPDATE main SET reservation_status = '#{reservation_status}' WHERE id = #{id} RETURNING id, place, reservation_status;")
    Bnb.new(id: result[0]['id'], user_name: result[0]['user_name'], place: result[0]['place'], description: result[0]['description'], fixed_price: result[0]['fixed_price'], reservation_status: result[0]['reservation_status'], date_from: result[0]['date_from'], date_to: result[0]['date_to'])
 end
 end

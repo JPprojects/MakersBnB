@@ -3,27 +3,38 @@
 </head>
 
 <h1 class="center">Welcome <%= @username %>!</h1>
-
+<div>
 <form class="center" action="/add_place"  method="get">
   <input type="submit" value="Add listing" />
 </form>
+ <% @places.each do |listing| %>
+<% if @username == listing.user_name && listing.reservation_status == 'requested' %>
+  <form action="/all/approve/<%= listing.id %>" method="post">
+    <label for="approve"><%=listing.place %></label>
+    <input type="submit" id="approve" value="Approve" />
+  </form>
+  <% end %>
+<% end %>
+</div>
 
 <ul class="pd">
   <% @places.each do |listing| %>
-  <li  <% if listing.reservation_status != 'reserved' %> class="list card" <% else%>  class="list card--disabled" <% end %> > 
-    <div class="card-inner">
-      <h2><%= listing.place %></h2>
-      <h3><%= listing.date_from %> - <%= listing.date_to %></h3>
-      <p><%= listing.description %></p>
-      <p>&#163;<%= listing.fixed_price %></h2></p>
-      <% if listing.reservation_status != 'reserved' %>
-        <form action="/all/reserve/<%= listing.id %>" method="get">
-          <input type="submit" value="Reserve" />
-          <% else %>
-          <p> Booked </p>
-        </form>
-      <% end %>
-    </div>
-  </li>
+
+      <li  <% if listing.reservation_status != 'reserved' %> class="list card" <% else%>  class="list card--disabled" <% end %> >
+        <div class="card-inner">
+         <h2><%= listing.place %></h2>
+         <h3><%= listing.date_from %> - <%= listing.date_to %></h3>
+          <p><%= listing.description %></p>
+          <p>&#163;<%= listing.fixed_price %></h2></p>
+          <% if listing.reservation_status != ('reserved' || 'requested') %>
+            <form action="/all/reserve/<%= listing.id %>" method="get">
+              <input type="submit" value="Reserve" />
+              <% else %>
+              <p> Booked </p>
+            </form>
+          <% end %>
+        </div>
+      </li>
+
   <% end %>
 </ul>
