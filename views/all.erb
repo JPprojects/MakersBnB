@@ -36,16 +36,18 @@
          <h2><%= listing.place %></h2>
          <h3><%= listing.date_from %> - <%= listing.date_to %></h3>
           <p><%= listing.description %></p>
-          <p>&#163;<%= listing.fixed_price %></h2></p>
-          <% if listing.reservation_status != ('reserved' || 'requested') %>
-            <form action="/all/reserve/<%= listing.id %>" method="get">
+          <p>&#163;<%= listing.fixed_price %></p>
+          <% if listing.reservation_status == ('requested') %>
+             <p>Awaiting Approval</p>
+              <% elsif listing.reservation_status != 'reserved' %>
+              <form action="/all/reserve/<%= listing.id %>" method="get">
+              <p><%=listing.reservation_status%></p>
               <input type="submit" value="Reserve" />
-              <% else %>
+              <%else%>
               <p> Booked </p>
             </form>
           <% end %>
         </div>
       </li>
-
   <% end %>
 </ul>
